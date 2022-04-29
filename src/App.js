@@ -1,5 +1,8 @@
 import React from 'react';
+
+import Home from './pages/Home';
+
 const App = () => {
-    return <div> Hello World, React Application built from Scratch!</div>
+    return <Home />
 }
 export default App;

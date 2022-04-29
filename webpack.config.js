@@ -26,6 +26,24 @@ module.exports = {
         exclude: /node_modules/,
         use: "babel-loader",
       },
+      {
+        test: /\.(bin|csv|jpg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+            }
+          }
+        ],
+        include: /(models)/,
+      },
+      {
+        test: /\.(mp4|png|svg|jpg|csv|gif|woff|eot|ttf|otf)$/,
+        use: [
+          'file-loader',
+        ],
+      },
     ],
   },
 };
